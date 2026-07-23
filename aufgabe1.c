@@ -6,4 +6,5 @@ int main() {
             printf("%d\n", zahl);
         }
     }
+    return 0;
 }

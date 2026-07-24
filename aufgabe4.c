@@ -9,6 +9,7 @@ int main() {
     };
     int sum[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
+    //rechnet alle Reihen, Spalten und Diagonalen aus
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
             sum[i] += matrix[i][j];
@@ -22,6 +23,7 @@ int main() {
         }
     }
 
+    //gibt das Ergebnis aus und ob es eine Reihe, Spalte oder Diagonale war
     for (int i = 1; i < 9; i++) {
         if (i <= 4) {
             printf("Summe Reihe %d: %d\n", i, sum[i - 1]);

@@ -5,6 +5,7 @@ int main() {
     int anzahl[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     int groesse = sizeof(a) / sizeof(a[0]);
 
+    //zählt die Anzahl an vorkommenden Nummern 0-9 in einem Array
     for (int i = 0; i < groesse; i++) {
         switch (a[i]) {
             case 0:

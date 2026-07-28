@@ -16,9 +16,9 @@ int main() {
             sum[i + 4] += matrix[j][i];
 
             if (i == j) {
-                sum[8] += matrix[i][j];
-            } else if (i + j == 3) {
-                sum[9] += matrix[i][j];
+                sum[sizeof(matrix[0]) / sizeof(matrix[0][0]) * 2] += matrix[i][j];
+            } else if (i + j == sizeof(matrix[0]) / sizeof(matrix[0][0]) - 1) {
+                sum[sizeof(matrix[0]) / sizeof(matrix[0][0]) * 2 + 1] += matrix[i][j];
             }
         }
     }
@@ -31,8 +31,8 @@ int main() {
             printf("Summe Spalte %d: %d\n", i - 4, sum[i - 1]);
         }
     }
-    printf("Summe Diagonale 1: %d\n", sum[8]);
-    printf("Summe Diagonale 2: %d\n", sum[9]);
+    printf("Summe Diagonale 1: %d\n", sum[sizeof(matrix[0]) / sizeof(matrix[0][0]) * 2]);
+    printf("Summe Diagonale 2: %d\n", sum[sizeof(matrix[0]) / sizeof(matrix[0][0]) * 2 + 1]);
 
     return 0;
 }

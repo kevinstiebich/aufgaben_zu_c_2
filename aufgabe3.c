@@ -5,40 +5,9 @@ int main() {
     int anzahl[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     int groesse = sizeof(a) / sizeof(a[0]);
 
-    //zählt die Anzahl an vorkommenden Nummern 0-9 in einem Array
+    //erhöht den entsprechenden Platz in anzahl[] um 1, je nachdem welche Zahl vorkommt
     for (int i = 0; i < groesse; i++) {
-        switch (a[i]) {
-            case 0:
-                anzahl[0]++;
-                break;
-            case 1:
-                anzahl[1]++;
-                break;
-            case 2:
-                anzahl[2]++;
-                break;
-            case 3:
-                anzahl[3]++;
-                break;
-            case 4:
-                anzahl[4]++;
-                break;
-            case 5:
-                anzahl[5]++;
-                break;
-            case 6:
-                anzahl[6]++;
-                break;
-            case 7:
-                anzahl[7]++;
-                break;
-            case 8:
-                anzahl[8]++;
-                break;
-            case 9:
-                anzahl[9]++;
-                break;
-        }
+        anzahl[a[i]]++;
     }
 
     for (int i = 0; i < groesse + 1; i++) {

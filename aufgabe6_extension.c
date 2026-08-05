@@ -1,12 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    char raute[10];
+    int numberOfRows;
+    printf("Wieviele Reihen sollen es sein? ");
+    scanf("%d", &numberOfRows);
+    int lineLength = numberOfRows * 2;
+    char raute[lineLength];
 
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < numberOfRows; i++) {
         int j = 0;
         //setzt die entsprechende Anzahl an Leerzeilen vor der ersten Raute
-        while (j < 4 - i){
+        while (j < numberOfRows - 1 - i){
             raute[j] = ' ';
             j++;
         }
